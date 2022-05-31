@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
-{
+{ 
+  
+
     public float power = 10;
     public Rigidbody rigidbody;
     public Vector3 respawnPoint;
+
+   
+    //　歩く速さ
+    public float walkSpeed;
+    //　ワープポイントでキャラクターを中央に移動させたり回転させたりするスピード
+    public float goToWaitPointSpeed;
+
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +44,11 @@ public class PlayerController : MonoBehaviour
         }
         if(transform.position.y <=-10)
         {
-            Respawn();
+           Respawn();
         }
+      
     }
+
     public void Respawn()
     {
         transform.position= respawnPoint;

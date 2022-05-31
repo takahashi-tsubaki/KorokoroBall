@@ -32,5 +32,4 @@ public class GameManager : MonoBehaviour
         Debug.Log("coinCount:" + coinCount);
         textComponent.text = "coinCount : " + coinCount;
     }
-
 }
